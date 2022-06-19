@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/cadastro-cliente.css">
+    <script src="validacoesjs/validações.js"></script>
     <title>Cadastro de Clientes</title>
 </head>
 <body>
 
     <div class="container">
-
+        
         <div class="form-left">
+        <form id="register-form">
 
         <div class="input-group">
 
@@ -97,7 +99,7 @@
                 </a>
             </div>
         </div>
-
+        </form>
         </div>
 
     </div>
@@ -115,13 +117,29 @@ $email = $_REQUEST["email"];
 $municipio = $_REQUEST["municipio"];
 $estado = $_REQUEST["estado"];
 $rua = $_REQUEST["rua"];
-$numero_rua = $_REQUEST["tipo_rua"];
+$numero_rua = $_REQUEST["numro_rua"];
 $tipo_rua = $_REQUEST["tipo_rua"];
 $cep = $_REQUEST["cep"];
-$complemento = $_REQUEST["complmento"];
+$complemento = $_REQUEST["complemento"];
 $obs = $_REQUEST["observacao"];
+
+if ($acao=="SALVAR")
+{
+	if ($id >0)
+	{
+		$SQL = "Update clientes set nome ='$nome',cpf='$cpf', ie ='$ie', telefone='$telefone', email='$email', municipio='$municipio', 
+        estado='$estado', rua='$rua', numero_rua='$numero_rua', tipo_rua='$tipo_rua', cep='$cep', complemento='$complemento', observacao='$obs', where id = $id";
+	}
+	if ($id ==0)
+	{
+		$SQL = "Insert into clientes (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) 
+        values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
+	}
+	mysqli_query($conexao,$SQL)or print($SQL);
+    echo('Usuário salvo com sucesso!');
+    header('Location:clientes.php');
+}
 ?>
 
-<script language="JavaScript" src='validacoesjs/validar.js'></script>
 </body>
 </html>

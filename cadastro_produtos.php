@@ -8,7 +8,6 @@
     <title>Cadastro de Produtos</title>
 </head>
 <body>
-    <script>
         <?php 
         $conexao=mysqli_connect("localhost","root","","fire");
         include ("conexao.php");
@@ -20,7 +19,6 @@
         $valor_compra = $_REQUEST["valor_compra"];
         $un_medida = $_REQUEST["unidade_medida"];
         ?>
-    </script>
 <div class="container">
 
     <div class="form-left">
