@@ -7,6 +7,7 @@
     <title>Dados da Empresa</title>
 </head>
 <body>
+<?php include("menu.html");?>
     <script>
         <?php 
         $conexao=mysqli_connect("localhost","root","","fire");

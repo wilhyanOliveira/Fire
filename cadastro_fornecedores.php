@@ -113,6 +113,10 @@
         $cep = $_REQUEST["cep"];
         $complemento = $_REQUEST["complmento"];
         $obs = $_REQUEST["observacao"];
+
+        $SQL = "Insert into fornecedores (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
+        mysqli_query($conexao,$SQL)or print($SQL);
+    
         ?>
 
 </body>

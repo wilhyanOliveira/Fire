@@ -31,7 +31,7 @@
         </form>
     </div>
     <?php
-    $conexao=mysqli_connect("localhost","root","","aula2022");
+    $conexao=mysqli_connect("localhost","root","","fire");
     include ("conexao.php");
 
     $email	= $_REQUEST["email"];

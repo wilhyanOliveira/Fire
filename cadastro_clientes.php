@@ -60,37 +60,37 @@
 
             <div class="input-box">
                 <label for="municipio">MUNICIPIO</label>
-                <input type="text" name="municipio" id="municipio" placeholder="municipio">
+                <input type="text" name="municipio" id="municipio" placeholder="municipio" value='<?=$RS["municipio"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="uf">UF</label>
-                <input type="text" name="uf" id="uf" placeholder="uf">
+                <input type="text" name="uf" id="uf" placeholder="uf" value='<?=$RS["estado"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="rua">RUA</label>
-                <input type="text" name="rua" id="rua" placeholder="rua">
+                <input type="text" name="rua" id="rua" placeholder="rua" value='<?=$RS["rua"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="numero">Nº</label>
-                <input type="text" name="numero" id="numero" placeholder="Nº">
+                <input type="text" name="numero" id="numero" placeholder="Nº" value='<?=$RS["numero_rua"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="tipo">TIPO</label>
-                <input type="text" name="tipo" id="tipo" placeholder="tipo">
+                <input type="text" name="tipo" id="tipo" placeholder="tipo" value='<?=$RS["tipo_rua"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="uf">CEP</label>
-                <input type="text" name="cep" id="cep" placeholder="cep">
+                <input type="text" name="cep" id="cep" placeholder="cep" value='<?=$RS["cep"];?>'>
             </div>
 
             <div class="input-box">
                 <label for="complemento">COMPLEMENTO</label>
-                <input type="text" name="complemento" id="complemento" placeholder="complemento">
+                <input type="text" name="complemento" id="complemento" placeholder="complemento" value='<?=$RS["complemento"];?>'>
             </div>
 
             <div class="full-box">
@@ -123,22 +123,9 @@ $cep = $_REQUEST["cep"];
 $complemento = $_REQUEST["complemento"];
 $obs = $_REQUEST["observacao"];
 
-if ($acao=="SALVAR")
-{
-	if ($id >0)
-	{
-		$SQL = "Update clientes set nome ='$nome',cpf='$cpf', ie ='$ie', telefone='$telefone', email='$email', municipio='$municipio', 
-        estado='$estado', rua='$rua', numero_rua='$numero_rua', tipo_rua='$tipo_rua', cep='$cep', complemento='$complemento', observacao='$obs', where id = $id";
-	}
-	if ($id ==0)
-	{
-		$SQL = "Insert into clientes (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) 
-        values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
-	}
+$SQL = "Insert into clientes (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
 	mysqli_query($conexao,$SQL)or print($SQL);
-    echo('Usuário salvo com sucesso!');
-    header('Location:clientes.php');
-}
+
 ?>
 
 </body>

@@ -43,13 +43,35 @@
     $usuario = $_REQUEST['usuario'];
     $senha   = $_REQUEST['senha'];
 
+    session_start();
 
-    //$conexao = mysqli_connect()->prepare("SELECT * FROM usuario WHERE email ='$usuario'");
-    $resultado = mysqli_query($conexao,"SELECT * FROM usuario WHERE email ='$usuario'") or false;
+    //print_r($_REQUEST);
+    if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
+    {
+        include_once('conexao.php');
+        $usuario = $_POST['usuario'];
+        $senha = $_POST['senha'];
 
-    if($resultado != false){
-        if(count($resultado->fetch_all()) >0)
-        echo ("window.Alert('Usuario ja cadastrado')");
+        $sql = "SELECT * FROM usuario WHERE usuario = '$usuario' and senha = '$senha'";
+
+        $result = $conexao->query($sql);
+
+        
+        if(mysqli_num_rows($result) < 1)
+        {
+            unset($_SESSION['usuario']);
+            unset($_SESSION['senha']);
+            header('Location: login.php');
+        }
+        else{
+            $_SESSION['usuario'] = $usuario;
+            $_SESSION['senha'] = $senha;
+            header('Location: index.php');
+        }
+    }
+    else
+    {
+        header('Location:home.php');
     }
 
 ?>        

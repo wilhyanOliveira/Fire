@@ -18,6 +18,10 @@
         $valor_venda = $_REQUEST["valor_venda"];
         $valor_compra = $_REQUEST["valor_compra"];
         $un_medida = $_REQUEST["unidade_medida"];
+
+        $SQL = "Insert into estoque (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
+	mysqli_query($conexao,$SQL)or print($SQL);
+
         ?>
 <div class="container">
 
