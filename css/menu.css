@@ -37,7 +37,7 @@ a, a:hover, a.active, a:active, a:visited, a:focus{
 	float: left;
 	list-style: none;
 	position:relative;
-	background: #f57900;
+	background: #3e69f3;
 }
 .exo-menu > li {
     float: left;
@@ -78,7 +78,7 @@ li.drop-down>ul{
   top: 0;
   min-width: 230px;
   display: none;
-  border-left: 1px solid #f57900;
+  border-left: 1px solid #3e69f3;
 }
 
 li.drop-down>ul>li>a,
