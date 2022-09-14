@@ -41,14 +41,14 @@ label{
     font-weight: .8rem;
 }
 input{
-    border:1px solid #f57900;
+    border:1px solid #0091ea;
     border-radius: 15px;
     padding:10px;
     margin-bottom: 30px;
     box-sizing: border-box;
 }
 input[type="submit"]{
-    background-color: #f57900;
+    background-color: #0091ea;
     border: none;
     cursor: pointer;
     border-radius: 15px;
@@ -72,5 +72,5 @@ template{
     display: flex;
 }
 h1{
-    color: #f57900;
+    color:#0091ea;
 }

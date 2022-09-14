@@ -11,7 +11,7 @@
 <body>
 <div class= "main-login">
         <div class= "left-login">
-            <img src="chama.png" class="left-login-image" alt="logo_chama">
+            <img src="chama.png" class="left-login-image" alt="">
             <h1>Vem para o Fire!</h1>
         </div>
         <div class= "rigth-login">
@@ -46,7 +46,7 @@
     session_start();
 
     //print_r($_REQUEST);
-    if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
+    /*if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
     {
         include_once('conexao.php');
         $usuario = $_POST['usuario'];
@@ -66,14 +66,14 @@
         else{
             $_SESSION['usuario'] = $usuario;
             $_SESSION['senha'] = $senha;
-            header('Location: index.php');
+            /*header('Location:');
         }
     }
     else
     {
-        header('Location:home.php');
+        header('Location:index.php');
     }
-
+*/
 ?>        
 
 </body>

@@ -8,7 +8,7 @@
     <title>Dados da Empresa</title>
 </head>
 <body>
-
+<?php include("new_menu.html");?>
 <div class="container">
         <div class="form-left">
         <form id="register-form">

@@ -9,7 +9,7 @@
 <body>
 <?php
 include ("conexao.php");
-include("munu.html");
+include("new_menu.html");
 
 $rnome   = $_REQUEST["rnome"];
 $rfone   = $_REQUEST["rfone"];
@@ -39,7 +39,7 @@ $tipos .= "</select>";
 
 $html1  = "<html><head><title>AULA</title></head><body>";
 
-$html2 = "<fieldset><Legend>Restri��es do relatorio</legend>";
+$html2 = "<fieldset><Legend>Restriçoes do relatorio</legend>";
 $html2 .= "<table>";
 $html2 .= "<form name='aa' action='relatorio.php' method='post'>";
 $html2 .= "<tr><td>Nome</td><td>Email</td><td>Fone</td><td>Saida</td><td>Tipo</td></tr>";
@@ -57,17 +57,17 @@ $html = "<html><body><table border >";
 if($tipo=="Nomes") 
 {
 	$SQL  = " select * from clientes where 1=1 ";
-	if (strlen($rnome) > 0) { $SQL .= " and nome_clie like '%".$rnome."%' "; }
+	if (strlen($rnome) > 0) { $SQL .= " and nome like '%".$rnome."%' "; }
 	if (strlen($remail) > 0) { $SQL .= " and email like '%".$remail."%' "; }
-	if (strlen($rfone) > 0) { $SQL .= " and fone like '%".$rfone."%' "; }
-	$SQL .= " order by nome_clie";
+	if (strlen($rfone) > 0) { $SQL .= " and telefone like '%".$rfone."%' "; }
+	$SQL .= " order by nome";
 // 	echo $SQL;
 	$RSS = mysqli_query($conexao,$SQL);
 	while($RS = mysqli_fetch_array($RSS))
 	{
-		$html .= "<tr><td>".$RS["id_clie"]."</td>";
-		$html .= "<td>".$RS["nome_clie"]."</td>";
-		$html .= "<td>".$RS["fone"]."</td>";
+		$html .= "<tr><td>".$RS["id"]."</td>";
+		$html .= "<td>".$RS["nome"]."</td>";
+		$html .= "<td>".$RS["telefone"]."</td>";
 		$html .= "<td>".$RS["email"]."</td>";
 		$html .= "</tr>";
 		$xx = $xx + 1;
@@ -96,18 +96,18 @@ if($tipo=="Contatos")
 if($tipo=="Cidades") 
 {
 	$SQL  = " select * from nomes where 1=1 ";
-	if (strlen($rnome) > 0) { $SQL .= " and ds_nome like '%".$rnome."%' "; }
-	if (strlen($remail) > 0) { $SQL .= " and ds_email like '%".$remail."%' "; }
-	if (strlen($rfone) > 0) { $SQL .= " and ds_fone like '%".$rfone."%' "; }
-	$SQL .= " order by ds_nome";
+	if (strlen($rnome) > 0) { $SQL .= " and nome like '%".$rnome."%' "; }
+	if (strlen($remail) > 0) { $SQL .= " and email like '%".$remail."%' "; }
+	if (strlen($rfone) > 0) { $SQL .= " and telefone like '%".$rfone."%' "; }
+	$SQL .= " order by nome";
 	echo $SQL;
 	$RSS = mysqli_query($conexao,$SQL);
 	while($RS = mysqli_fetch_array($RSS))
 	{
-		$html .= "<tr><td>".$RS["cd_nome"]."</td>";
-		$html .= "<td>".$RS["ds_nome"]."</td>";
-		$html .= "<td>".$RS["ds_fone"]."</td>";
-		$html .= "<td>".$RS["ds_email"]."</td>";
+		$html .= "<tr><td>".$RS["id"]."</td>";
+		$html .= "<td>".$RS["nome"]."</td>";
+		$html .= "<td>".$RS["telefone"]."</td>";
+		$html .= "<td>".$RS["email"]."</td>";
 		$html .= "</tr>";
 		$xx = $xx + 1;
 	}
@@ -161,7 +161,7 @@ function DoPrinting()
 {
 	if (!window.print)
 	{
-		alert("Use o Internet Explorer \n nas vers�es 4.0 ou superior!")
+		alert("Use o Internet Explorer \n nas versoes 4.0 ou superior!")
 		return
 	}
 	window.print()

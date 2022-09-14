@@ -9,7 +9,7 @@
     <title>Usuarios</title>
 </head>
 <body>
-<?php include("menu.html");?>
+<?php include("new_menu.html");?>
 
 <div id="main-container">
         <h1>Cadastrar novo usuario</h1>

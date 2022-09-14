@@ -57,37 +57,37 @@
 
     <div class="input-box">
         <label for="municipio">MUNICIPIO</label>
-        <input type="text" name="municipio" id="municipio" placeholder="municipio">
+        <input type="text" name="municipio" id="municipio" placeholder="municipio" <?=$RS["municipio"];?>>
     </div>
 
     <div class="input-box">
         <label for="uf">UF</label>
-        <input type="text" name="uf" id="uf" placeholder="uf">
+        <input type="text" name="uf" id="uf" placeholder="uf" <?=$RS["uf"];?>>
     </div>
 
     <div class="input-box">
         <label for="rua">RUA</label>
-        <input type="text" name="rua" id="rua" placeholder="rua">
+        <input type="text" name="rua" id="rua" placeholder="rua" <?=$RS["rua"];?>>
     </div>
 
     <div class="input-box">
         <label for="numero">Nº</label>
-        <input type="text" name="numero" id="numero" placeholder="Nº">
+        <input type="text" name="numero" id="numero" placeholder="Nº" <?=$RS["numero_rua"];?>>
     </div>
 
     <div class="input-box">
         <label for="tipo">TIPO</label>
-        <input type="text" name="tipo" id="tipo" placeholder="tipo">
+        <input type="text" name="tipo" id="tipo" placeholder="tipo" <?=$RS["tipo_rua"];?>>
     </div>
 
     <div class="input-box">
         <label for="uf">CEP</label>
-        <input type="text" name="cep" id="cep" placeholder="cep">
+        <input type="text" name="cep" id="cep" placeholder="cep" <?=$RS["cep"];?>>
     </div>
 
     <div class="input-box">
         <label for="complemento">COMPLEMENTO</label>
-        <input type="text" name="complemento" id="complemento" placeholder="complemento">
+        <input type="text" name="complemento" id="complemento" placeholder="complemento" <?=$RS["complemento"];?>>
     </div>
 </div>
 

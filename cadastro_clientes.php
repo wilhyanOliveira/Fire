@@ -9,7 +9,7 @@
     <title>Cadastro de Clientes</title>
 </head>
 <body>
-
+<?php include("new_menu.html");?>
     <div class="container">
         
         <div class="form-left">

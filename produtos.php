@@ -8,7 +8,7 @@
     <title>Estoque</title>
 </head>
 <body>
-<?php include("menu.html");?>
+<?php include("new_menu.html");?>
 
 <div class="full-box">
         <a href="cadastro_produtos.php">

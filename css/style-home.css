@@ -1,9 +1,11 @@
 body{
-    background-image: url(chama.png);
+    align-items: center;
+    background-image: url(chama_azul.jpg);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 30%;
     background-position: top;
-    margin:0 ;
+    margin-top: 100px;
+    margin-bottom: none;
     padding: 0;
     border: 0;
     }
