@@ -138,11 +138,36 @@ function valida_login()
     valido ="sim";
 
     if (!(validacaoEmail(document.getElementById("email").value)))
-    { valido = "nao"; 
+    { 
+        valido = "nao"; 
     }
 
     if(!(valida_senha(document.getElementById("senha").value)))
     {
-    valido = "não";
+        valido = "não";
     }
+}
+
+//validação de cadastro de fornecedores
+function valida_fornecedor()
+{
+    var valido;
+    valido = "sim"
+
+    if(!(validarCNPJ(document.getElementById("cnpj").value)))
+    {
+        valido = "não";
+    }
+    if(!(validacaoEmail(document.getElementById("email").value)))
+    {
+        valido = "não"
+    }
+
+}
+
+//validação de cadastro de clientes
+function valida_cliente()
+{
+    var valido;
+    valido = "sim"
 }

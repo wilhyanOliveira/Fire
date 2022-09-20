@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro-fornecedores.css">
     <title>Cadastro de fornecedores</title>
 </head>
 <body>
 
-   <div class="container">
+<div class="container">
 
 <div class="form-left">
 
@@ -59,38 +60,34 @@
         <label for="municipio">MUNICIPIO</label>
         <input type="text" name="municipio" id="municipio" placeholder="municipio" <?=$RS["municipio"];?>>
     </div>
-
     <div class="input-box">
         <label for="uf">UF</label>
         <input type="text" name="uf" id="uf" placeholder="uf" <?=$RS["uf"];?>>
     </div>
-
     <div class="input-box">
         <label for="rua">RUA</label>
         <input type="text" name="rua" id="rua" placeholder="rua" <?=$RS["rua"];?>>
     </div>
-
     <div class="input-box">
         <label for="numero">Nº</label>
         <input type="text" name="numero" id="numero" placeholder="Nº" <?=$RS["numero_rua"];?>>
     </div>
-
     <div class="input-box">
         <label for="tipo">TIPO</label>
         <input type="text" name="tipo" id="tipo" placeholder="tipo" <?=$RS["tipo_rua"];?>>
     </div>
-
     <div class="input-box">
         <label for="uf">CEP</label>
         <input type="text" name="cep" id="cep" placeholder="cep" <?=$RS["cep"];?>>
     </div>
-
     <div class="input-box">
         <label for="complemento">COMPLEMENTO</label>
         <input type="text" name="complemento" id="complemento" placeholder="complemento" <?=$RS["complemento"];?>>
     </div>
 </div>
-
+    <div class="full-box">
+            <input type="submit" id="btn-submit" value="SALVAR" onclick="Validar_fornecedor()">
+    </div>
 </div>
 
 </div>
@@ -113,6 +110,7 @@
         $cep = $_REQUEST["cep"];
         $complemento = $_REQUEST["complmento"];
         $obs = $_REQUEST["observacao"];
+
 
         $SQL = "Insert into fornecedores (nome,cpf,ie,telefone,email,municipio,estado,rua,numero_rua,tipo_rua,cep,complemento,observacao) values ('$nome','$cpf','$ie','$telefone','$email','$municipio','$estado','$rua','$numero_rua','$tipo_rua','$cep','$complemento','$obs')";
         mysqli_query($conexao,$SQL)or print($SQL);
