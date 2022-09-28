@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="icone.ico">
 	<link rel="stylesheet" href="css/cadastro-cliente.css">
     <script src="validacoesjs/validações.js"></script>
     <title>Cadastro de Clientes</title>
@@ -95,7 +96,7 @@
 
             <div class="full-box">
                 <a href="menu.html">
-                    <input type="submit" id="btn-submit" value="SALVAR" >
+                    <input type="submit" id="btn-submit" value="SALVAR" onclick="valida_cliente();">
                 </a>
             </div>
         </div>

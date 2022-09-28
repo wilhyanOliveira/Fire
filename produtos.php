@@ -37,7 +37,7 @@
         $valor_compra = $_REQUEST["valor_compra"];
         $un_medida = $_REQUEST["unidade_medida"];
 
-    $SQL = "select * from forncedor";
+    $SQL = "select * from estoque";
     $RSS = mysqli_query($conexao,$SQL);
     while($RS = mysqli_fetch_array($RSS))
     {

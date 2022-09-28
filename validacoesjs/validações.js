@@ -170,4 +170,13 @@ function valida_cliente()
 {
     var valido;
     valido = "sim"
+    
+    if(!(valida_CPF(document.getElementById("cpf").value)))
+    {
+        valido = "não";
+    }
+    if(!(validacaoEmail(document.getElementById("email").value)))
+    {
+        valido = "não";
+    }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="icone.ico">
     <link rel="stylesheet" href="css/fornecedores.css">
     <title>Fornecedores</title>
 </head>
@@ -45,7 +46,7 @@ $conexao=mysqli_connect("localhost","root","","fire");
     $complemento = $_REQUEST["complmento"];
     $obs = $_REQUEST["observacao"];
 
-    $SQL = "select * from forncedor";
+    $SQL = "select * from fornecedores";
     $RSS = mysqli_query($conexao,$SQL);
     while($RS = mysqli_fetch_array($RSS))
         {
