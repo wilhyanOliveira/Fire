@@ -19,6 +19,37 @@
         <a href="cadastro_clientes.php">
             <input type="submit" id="btn-submit" value="Alterar" >
         </a>
+        
+        <div class="full-box">
+        <a href="cliente_Bruno.php">
+            <input type="button"  value="Bruno" >
+        </a>
+
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Maria" >
+        </a>
+
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Natália" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Rener" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Lucas" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="João" >
+        </a>
+        <div class="full-box">
+        <a href="clientes_gabriel.php">
+            <input type="button" value="Gabriel" >
+        </a>
     </div>
 <table>
 <tr><th>Código</th><th>Nome</th><th>CPF</th><th>RG</th><th>FONE</th><th>EMAIL</th><th>MUNICIPIO</th><th>UF</th><th>RUA</th><th>NÚMERO</th></tr>

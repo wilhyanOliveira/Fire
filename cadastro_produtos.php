@@ -9,21 +9,7 @@
     <title>Cadastro de Produtos</title>
 </head>
 <body>
-        <?php 
-        $conexao=mysqli_connect("localhost","root","","fire");
-        include ("conexao.php");
-        $id = $_REQUEST["id"];
-        $referencia = $_REQUEST["referencia"];
-        $tipo_item = $_REQUEST["tipo_item"];
-        $descricao = $_REQUEST["descricao"];
-        $valor_venda = $_REQUEST["valor_venda"];
-        $valor_compra = $_REQUEST["valor_compra"];
-        $un_medida = $_REQUEST["unidade_medida"];
 
-        $SQL = "Insert into estoque (id,referencia,tipo_item,descricao,valor_venda,valor_compra,unidade_medida) values ('$id','$referencia','$tipo_item','$descricao','$valor_venda','$valor_compra','$unidade_medida')";
-	mysqli_query($conexao,$SQL)or print($SQL);
-
-        ?>
 <div class="container">
 
     <div class="form-left">
@@ -64,11 +50,30 @@
         <label for="unidade_medida">UNIDADE DE MEDIDA</label>
         <input type="text" name="unidade_medida" id="unidade_medida" placeholder="UN" required value='<?=$RS["unidade_medida"];?>'>
     </div>
+
 </div>
+    <input type="submit" id="btn-submit" value="SALVAR">
+
 
 </div>
 
 </div>
+
+<?php 
+        $conexao=mysqli_connect("localhost","root","","fire");
+        include ("conexao.php");
+        $id = $_REQUEST["id"];
+        $referencia = $_REQUEST["referencia"];
+        $tipo_item = $_REQUEST["tipo_item"];
+        $descricao = $_REQUEST["descricao"];
+        $valor_venda = $_REQUEST["valor_venda"];
+        $valor_compra = $_REQUEST["valor_compra"];
+        $un_medida = $_REQUEST["unidade_medida"];
+
+        $SQL = "Insert into estoque (id,referencia,tipo_item,descricao,valor_venda,valor_compra,unidade_medida) values ('$id','$referencia','$tipo_item','$descricao','$valor_venda','$valor_compra','$unidade_medida')";
+	mysqli_query($conexao,$SQL)or print($SQL);
+
+        ?>
     
 </body>
 </html>

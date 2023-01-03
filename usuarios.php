@@ -5,45 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="icone.ico">
-    <link rel="stylesheet" href="css/usuario.css">
-    <script src="validacoesjs/validações.js"></script>
-    <title>Usuarios</title>
+    <link rel="stylesheet" href="css/clientes.css">
+    <title>clientes</title>
 </head>
 <body>
 <?php include("new_menu.html");?>
-
-<div id="main-container">
-        <h1>Cadastrar novo usuario</h1>
-        <form id="register-form">
-            <div class="half-box">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" value='<?=$RS["email"];?>' required>
-            </div>
-            <div class="full-box">
-                <label for="nome">Nome</label>
-                <input type="nome" name="nome" id="nome" placeholder="Digite seu nome" value='<?=$RS["nome"];?>' required>
-            </div>
-            <div class="full-box">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Digite sua senha" value='<?=$RS["senha"];?>' required>
-            </div>
-            <div class="full-box">
-                <input type="submit" id="btn-submit" value="SALVAR" onclick="valida_registro()">
-            </div>
-            <p class="error-validation template"></p>
-        </form>
+    <div class="full-box">
+        <a href="cadastro_usuário.php">
+            <input type="submit" id="btn-submit" value="Cadastrar" >
+        </a>
     </div>
-    <?php
-    $conexao=mysqli_connect("localhost","root","","fire");
-    include ("conexao.php");
+    <div class="full-box">
+        <a href="cadastro_clientes.php">
+            <input type="submit" id="btn-submit" value="Alterar" >
+        </a>
+        
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Bruno" >
+        </a>
 
-    $email	= $_REQUEST["email"];
-    $nome   = $_REQUEST["nome"];
-    $senha  = $_REQUEST["senha"];
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Maria" >
+        </a>
 
-    $SQL = "Insert into usuario (senha,email,nome) values ('$senha','$email','$nome')";
-	mysqli_query($conexao,$SQL)or print($SQL);
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Natália" >
+        </a>
+        <div class="full-box">
+        <a href="usuario_rener.php">
+            <input type="button" value="Rener" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Lucas" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="João" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Gabriel" >
+        </a>
+        </a>
+        <div class="full-box">
+        <a href="usuarios_carlos.php">
+            <input type="button"  value="carlos" >
+        </a>
+    </div>
+<table>
+<tr><th>Código</th><th>Nome</th><th>EMAIL</th><th>SENHA</th>
+<!--<tr><td>Codigo</td><td>Nome</td><td>CPF</td><td>RG</td><td>FONE</td><td>EMAIL</td><td>MUNICIPIO</td><td>UF</td><td>RUA</td><td>NÚMERO</td> -->
 
-    ?>   
-</body>
+<?PHP
+
+$conexao=mysqli_connect("localhost","root","","fire");
+include ("conexao.php");
+$id	= $_REQUEST["id"];
+$nome = $_REQUEST["nome"];
+$email = $_REQUEST['email'];
+$senha = $_REQUEST['senha'];
+
+$SQL = "select * from usuario";
+$RSS = mysqli_query($conexao,$SQL);
+while($RS = mysqli_fetch_array($RSS))
+{
+echo "<tr><td onclick='carrega(".$RS["id"].");' onmousemove='style=".chr(34)."cursor: pointer;".chr(34)."' >".$RS["id"].
+"</td><td>".$RS["nome"]."</td><td>".$RS["email"]."</td><td>".$RS["senha"];
+}
+?>
+</table>
+
+ <script>
+ </script>
+</body>.
 </html>

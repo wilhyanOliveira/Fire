@@ -19,7 +19,11 @@
         <a href="cadastro_clientes.php">
             <input type="submit" id="btn-submit" value="Alterar" >
         </a>
+        <a href="estoque_gabriel.php">
+            <input type="button" value="Gabriel" >
+        </a>
     </div>
+    
 
 <table>
 <tr><th>CÓDIGO</th><th>REFERENCIA</th><th>TIPO</th><th>DESCRICAO</th><th>PREÇO</th><th>CUSTO</th><th>UN</th></tr>

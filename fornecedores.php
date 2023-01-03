@@ -20,6 +20,36 @@
         <a href="cadastro_clientes.php">
             <input type="submit" id="btn-submit" value="Alterar" >
         </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Bruno" >
+        </a>
+
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Maria" >
+        </a>
+
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Natália" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Rener" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Lucas" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="João" >
+        </a>
+        <div class="full-box">
+        <a href="#">
+            <input type="submit" id="btn-submit" value="Gabriel" >
+        </a>
     </div>
 
 <table>

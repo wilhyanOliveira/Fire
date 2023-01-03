@@ -44,8 +44,6 @@ function validacaoEmail(texto)
 		(dominio.lastIndexOf(".") < dominio.length - 1)) 
 		{ return true; }
 	else{ alert('Confira o email'); return false;	}
-}
-
 
 // VALIDADOR DE CPF
 function valida_CPF(cpf)
@@ -179,4 +177,5 @@ function valida_cliente()
     {
         valido = "não";
     }
+}
 }
